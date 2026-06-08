@@ -232,7 +232,7 @@ glow = { workspace = true, optional = true }
 # Backend: Vulkan and Dx12
 gpu-allocator = { workspace = true, optional = true }
 # Backend: Vulkan
-ash = { workspace = true, optional = true }
+ash = { workspace = true, optional = true, features = ["provisional"] }
 gpu-descriptor = { workspace = true, optional = true }
 smallvec = { workspace = true, optional = true, features = ["union"] }
 # Backend: GLES

@@ -1,7 +1,7 @@
 //! Definition of the [`SemaphoreList`] type.
 
 use alloc::vec::Vec;
-use ash::vk;
+use ash::vk::{self, TaggedStructure};
 use core::mem::MaybeUninit;
 
 #[derive(Debug, PartialEq)]
@@ -106,7 +106,7 @@ impl SemaphoreList {
             .signal_semaphores(&signal_semaphores.semaphores);
 
         if uses_timeline {
-            submit_info = submit_info.push_next(timeline_info);
+            submit_info = submit_info.push(timeline_info);
         }
 
         submit_info
