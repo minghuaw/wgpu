@@ -281,7 +281,7 @@ windows-result = { version = "0.4", default-features = false }
 # gpu-allocator = { version = "0.28", default-features = false, features = [
 #     "hashbrown",
 # ] }
-gpu-allocator = { path = "../gpu-allocator", default-features = false, features = [
+gpu-allocator = { git = "https://github.com/minghuaw/gpu-allocator.git", branch = "ash-ohos", default-features = false, features = [
     "hashbrown",
 ] }
 
